@@ -1,0 +1,37 @@
+#### HOME
+GET http://localhost:3333/ HTTP/1.1
+
+#### CREATE
+POST http://localhost:3333/create HTTP/1.1
+Content-Type: application/json
+
+{
+  "original_url": "http://localhost:3333/"
+}
+
+#### SET URL/PICTURE
+PATCH http://localhost:3333/set/picture HTTP/1.1
+Content-Type: application/json
+
+{
+  "picture_id": 1,
+  "url_id": 20
+}
+
+#### PICTURE CREATE
+POST http://localhost:3333/create/picture HTTP/1.1
+Content-Type: application/json
+
+{
+  "href": "https://github.com/lucasbernardol.png",
+  "url_id": 20
+}
+
+#### STATUS CREATE
+POST http://localhost:3333/add/status HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Google",
+  "url_id": 20
+}
